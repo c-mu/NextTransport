@@ -1,0 +1,1 @@
+﻿using PublicTransportBuddy.BusinessLayer; using System.Collections.Generic;  namespace PublicTransportBuddy.ServiceLayer { public interface ITransportationProvider { string Name { get; }  #if WINDOWS_UWP IEnumerable<Stop> GetStopsByLocation(Windows.Foundation.Point location); #else IEnumerable<Stop> GetStopsByLocation(System.Drawing.Point location); #endif } }
